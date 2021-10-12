@@ -1,5 +1,6 @@
-package com.example.kmm.android
+package com.example.kmm.android.di
 
+import com.example.kmm.android.ui.MainViewModel
 import com.example.kmm.data.api.Network
 import com.example.kmm.data.api.PokemonService
 import com.example.kmm.data.api.PokemonServiceImpl

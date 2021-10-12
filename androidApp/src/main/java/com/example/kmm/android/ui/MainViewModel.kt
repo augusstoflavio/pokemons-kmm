@@ -1,11 +1,12 @@
-package com.example.kmm.android
+package com.example.kmm.android.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.kmm.android.ui.utils.Resource
 import com.example.kmm.domain.entity.Pokemon
 import com.example.kmm.domain.useCase.GetPokemons
-import com.example.kmm.extensions.run
+import com.example.kmm.android.extensions.run
 
 class MainViewModel(private val getPokemons: GetPokemons): ViewModel() {
 

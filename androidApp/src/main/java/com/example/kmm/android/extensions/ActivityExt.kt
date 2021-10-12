@@ -1,11 +1,10 @@
-package com.example.kmm.extensions
+package com.example.kmm.android.extensions
 
-import android.app.Activity
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
-import com.example.kmm.android.Resource
+import com.example.kmm.android.ui.utils.Resource
 import com.example.kmm.data.api.exception.NoConnectionException
 
 fun <T> AppCompatActivity.observerResource(resource: LiveData<Resource<T>>, progress: View, callback: (T) -> Any) {

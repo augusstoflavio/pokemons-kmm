@@ -1,4 +1,4 @@
-package com.example.kmm.android
+package com.example.kmm.android.ui.utils
 
 sealed class Resource<out T> {
     data class Success<out T>(val data: T): Resource<T>()

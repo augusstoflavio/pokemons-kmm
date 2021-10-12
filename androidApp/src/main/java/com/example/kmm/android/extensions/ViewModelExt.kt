@@ -1,9 +1,9 @@
-package com.example.kmm.extensions
+package com.example.kmm.android.extensions
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kmm.android.Resource
+import com.example.kmm.android.ui.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

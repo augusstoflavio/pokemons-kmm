@@ -1,4 +1,4 @@
-package com.example.kmm.android
+package com.example.kmm.android.ui
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,9 @@ import com.bumptech.glide.Glide
 import com.example.kmm.android.databinding.AdapterPokemonBinding
 import com.example.kmm.domain.entity.Pokemon
 
-class PokemonAdapter(private val context: Context): ListAdapter<Pokemon, PokemonAdapter.PokemonViewHolder>(PokemonAdapter) {
+class PokemonAdapter(private val context: Context): ListAdapter<Pokemon, PokemonAdapter.PokemonViewHolder>(
+    PokemonAdapter
+) {
 
     class PokemonViewHolder(private val binding: AdapterPokemonBinding, private val context: Context) : RecyclerView.ViewHolder(binding.root) {
 

@@ -1,10 +1,10 @@
-package com.example.kmm.android
+package com.example.kmm.android.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kmm.android.databinding.ActivityMainBinding
-import com.example.kmm.extensions.observerResource
+import com.example.kmm.android.extensions.observerResource
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
