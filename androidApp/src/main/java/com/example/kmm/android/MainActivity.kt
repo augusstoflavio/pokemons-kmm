@@ -1,10 +1,10 @@
 package com.example.kmm.android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kmm.android.databinding.ActivityMainBinding
+import com.example.kmm.extensions.observerResource
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -25,15 +25,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupObserver() {
-        viewModel.pokemons.observe(this) {
-            when(it) {
-                is Resource.Loading -> {binding.progress.visibility = View.VISIBLE}
-                is Resource.Failure -> {binding.progress.visibility = View.INVISIBLE}
-                is Resource.Success -> {
-                    binding.progress.visibility = View.INVISIBLE
-                    pokemonAdapter.submitList(it.data)
-                }
-            }
+        observerResource(viewModel.pokemons, binding.progress) {
+            pokemonAdapter.submitList(it)
         }
     }
 

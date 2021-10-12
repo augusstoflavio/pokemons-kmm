@@ -1,6 +1,6 @@
 package com.example.kmm.android
 
-import com.example.kmm.data.api.HttpClientFactory
+import com.example.kmm.data.api.Network
 import com.example.kmm.data.api.PokemonService
 import com.example.kmm.data.api.PokemonServiceImpl
 import com.example.kmm.data.dataSource.PokemonDataSource
@@ -16,8 +16,12 @@ object KoinModule {
 
     fun get(): Module {
         return module {
+            single {
+                Network()
+            }
+
             single<PokemonService> {
-                PokemonServiceImpl()
+                PokemonServiceImpl(get())
             }
 
             single<PokemonDataSource> {

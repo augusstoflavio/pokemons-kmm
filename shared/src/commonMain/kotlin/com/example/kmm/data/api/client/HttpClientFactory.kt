@@ -1,6 +1,6 @@
-package com.example.kmm.data.api
+package com.example.kmm.data.api.client
 
-import com.example.kmm.ApiEngine
+import com.example.kmm.data.api.ApiEngine
 import io.ktor.client.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*

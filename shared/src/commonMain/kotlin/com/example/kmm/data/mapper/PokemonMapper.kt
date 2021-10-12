@@ -1,6 +1,6 @@
 package com.example.kmm.data.mapper
 
-import com.example.kmm.data.api.PokemonDTO
+import com.example.kmm.data.api.dto.PokemonDTO
 import com.example.kmm.domain.entity.Pokemon
 
 object PokemonMapper {

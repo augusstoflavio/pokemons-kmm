@@ -1,9 +1,10 @@
 package com.example.kmm.data.api
 
-import io.ktor.client.request.*
+import com.example.kmm.data.api.dto.PokemonResponseDTO
 
-class PokemonServiceImpl(): PokemonService {
-    override suspend fun getPokemons(): PokemonResponse {
-        return HttpClientFactory.create().get("https://pokeapi.co/api/v2/pokemon?limit=99999")
+class PokemonServiceImpl(private val network: Network) : PokemonService {
+
+    override suspend fun getPokemons(): PokemonResponseDTO {
+        return network.get("https://pokeapi.co/api/v2/pokemon?limit=99999")
     }
 }
