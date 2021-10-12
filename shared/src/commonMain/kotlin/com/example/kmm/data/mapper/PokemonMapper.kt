@@ -11,7 +11,7 @@ object PokemonMapper {
 
         return Pokemon(
             id = id,
-            name = pokemonDTO.name,
+            name = pokemonDTO.name.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() },
             image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$id.png"
         )
     }
